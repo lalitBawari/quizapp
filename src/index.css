@@ -1,0 +1,145 @@
+body {
+  font-family: Arial, sans-serif;
+   background: linear-gradient(to bottom, #efe3e5, #00020b);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.app {
+  background-color: #200909;
+  border-radius: 30px;
+  background: linear-gradient(to bottom, #dff395, #9fdfe3);
+  box-shadow: 0 2px 4px rgba(69, 25, 35, 0.1);
+  border: 1px solid #00020b;
+  padding: 20px;
+  width: 400px;
+  position: relative;
+}
+
+.app::before,
+.app::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 30px;
+  border: 10px solid transparent;
+  pointer-events: none;
+  z-index: -1;
+  animation: borderAnimation 3s infinite linear;
+}
+
+
+
+.score-section {
+  text-align: center;
+}
+
+.question-section {
+  text-align: center;
+}
+
+.answer-section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+button {
+  background-color: #4caf50;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+.corner-text {
+  position: absolute;
+  top: 21%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  color: #2b020e;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+.red-light {
+  animation: blink-red-light 1s infinite;
+
+}
+
+@keyframes blink-red-light {
+  0% {
+    background-color: red;
+  }
+  50% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: red;
+  }
+}
+.start-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 35vh;
+  background: linear-gradient(
+    45deg,
+    #e7ce4f,
+    #5ee3ec,
+    #e0e0e0
+  );
+  background-size: 300% 300%;
+  animation: gradientAnimation 10s ease infinite;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+.start-section h2 {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+
+
+
